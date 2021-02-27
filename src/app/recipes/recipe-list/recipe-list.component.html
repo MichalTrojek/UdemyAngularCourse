@@ -1,1 +1,21 @@
-<p>recipe-list works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-succes">New Recipe</button>
+    </div>
+</div>
+    
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">Recipe Name: {{recipes[0].name}}</h4>
+                <p class="list-group-item-text">Description: {{recipes[0].description}}</p>
+            </div>
+            <span class="pull-right">
+                <img src="{{recipes[0].imagePath}}" alt="image of {{recipes[0].name}}" class="img-responsive">
+            </span>
+        </a>
+        <app-recipe-item></app-recipe-item>
+    </div>
+</div>
+
