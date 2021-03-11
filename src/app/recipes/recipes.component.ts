@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from './recipe.model';
+
 import { RecipeService } from './service/recipe.service';
 
 @Component({
@@ -10,7 +10,5 @@ import { RecipeService } from './service/recipe.service';
 })
 export class RecipesComponent implements OnInit {
   constructor() {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }
