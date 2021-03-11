@@ -33,7 +33,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
     );
   }
 
-  onSubmit() {
+  onSubmit(): void {
     const newIngredient: Ingredient = new Ingredient(
       this.shoppingListForm.value.name,
       this.shoppingListForm.value.amount
@@ -49,9 +49,14 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
     this.onClear();
   }
 
-  onClear() {
+  onClear(): void {
     this.editMode = false;
     this.shoppingListForm.reset();
+  }
+
+  onDelete(): void {
+    this.onClear();
+    this.shoppingListService.deleteIngredient(this.editItemIndex);
   }
 
   ngOnDestroy() {
