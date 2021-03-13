@@ -10,20 +10,22 @@ import { Recipe } from '../recipe.model';
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
 
-  private recipes: Recipe[] = [
-    new Recipe(
-      'First Recipe',
-      'First description tada',
-      'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
-      [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
-    ),
-    new Recipe(
-      'Second Recipe',
-      'SEcond description',
-      'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_1280.jpg',
-      [new Ingredient('Second Ing', 5), new Ingredient('French Fries', 20)]
-    ),
-  ];
+  // private recipes: Recipe[] = [
+  //   new Recipe(
+  //     'First Recipe',
+  //     'First description tada',
+  //     'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
+  //     [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
+  //   ),
+  //   new Recipe(
+  //     'Second Recipe',
+  //     'SEcond description',
+  //     'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_1280.jpg',
+  //     [new Ingredient('Second Ing', 5), new Ingredient('French Fries', 20)]
+  //   ),
+  // ];
+
+  private recipes: Recipe[] = [];
 
   constructor(private shoppingListService: ShoppingListService) {}
 
