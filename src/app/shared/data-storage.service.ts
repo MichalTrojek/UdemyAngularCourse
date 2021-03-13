@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Recipe } from '../recipes/recipe.model';
-import { RecipeService } from '../recipes/service/recipe.service';
+
 import { map, tap } from 'rxjs/operators';
+import { RecipeService } from '../recipes/recipe.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class DataStorageServiceService {
+export class DataStorageService {
   private URL =
     'https://udemy-angular-course-b0fc4-default-rtdb.europe-west1.firebasedatabase.app';
 
